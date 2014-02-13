@@ -3,6 +3,8 @@
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com" />
+  <remote  name="paosp"
+           fetch=".." />
   <default revision="refs/tags/android-4.4_r1.2"
            remote="aosp"
            sync-j="4" />
@@ -11,6 +13,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
+  <project path="test" name="phoenixA20_documents" remote="paosp">
   <!--project path="art" name="platform/art" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
